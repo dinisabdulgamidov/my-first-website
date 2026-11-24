@@ -2,68 +2,211 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой первый сайт</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f1f5f9;
-            color: #1e293b;
-            text-align: center;
-        }
+<title>Мой первый современный сайт</title>
 
-        header {
-            background: #172554;
-            color: white;
-            padding: 30px;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        main {
-            padding: 60px 20px;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: white;
+}
 
-        h1 {
-            font-size: 36px;
-        }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: #111b30;
+}
 
-        p {
-            font-size: 18px;
-        }
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #60a5fa;
+}
 
-        button {
-            background: #2563eb;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
 
-        button:hover {
-            background: #1d4ed8;
-        }
-    </style>
+nav a:hover {
+    color: #60a5fa;
+}
+
+.hero {
+    text-align: center;
+    padding: 110px 20px;
+    background: linear-gradient(135deg, #172554, #312e81);
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #cbd5e1;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 16px 30px;
+    background: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #2563eb;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #172338;
+    padding: 35px 20px;
+    border-radius: 16px;
+    border: 1px solid #293955;
+}
+
+.card h3 {
+    color: #60a5fa;
+}
+
+.card p {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+footer {
+    background: #111b30;
+    text-align: center;
+    padding: 25px;
+    color: #94a3b8;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 75px 20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h2>Мой первый сайт</h2>
-    </header>
+<header>
+    <div class="logo">MY PROJECT</div>
 
-    <main>
-        <h1>Привет! 👋</h1>
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#about">О сайте</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+</header>
 
-        <p>Это мой первый сайт, который я создаю вместе с ChatGPT.</p>
+<div class="hero" id="home">
+    <h1>Добро пожаловать!</h1>
 
-        <button onclick="alert('Ура! Моя первая кнопка работает!')">
-            Нажми на меня
-        </button>
-    </main>
+    <p>
+        Это мой первый современный сайт.<br>
+        Я создаю новые проекты вместе с искусственным интеллектом.
+    </p>
+
+    <a href="#about" class="button">
+        Узнать больше
+    </a>
+</div>
+
+<section id="about">
+    <h2>Что я создаю?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🌐 Сайты</h3>
+            <p>
+                Современные сайты для бизнеса,
+                проектов и личных идей.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📱 Приложения</h3>
+            <p>
+                Полезные приложения
+                для повседневной жизни.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🤖 ИИ-проекты</h3>
+            <p>
+                Автоматизация и решения
+                с искусственным интеллектом.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contacts">
+    <h2>Мой первый проект</h2>
+    <p>Сайт постоянно развивается и становится лучше.</p>
+    <a href="#home" class="button">Наверх</a>
+</section>
+
+<footer>
+    © 2026 Мой первый сайт. Создан вместе с ChatGPT.
+</footer>
 
 </body>
 </html>
